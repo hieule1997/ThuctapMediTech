@@ -1,21 +1,21 @@
-#Những nội dung chính cần ghi nhớ :
-  - Tạo thư mục với câu lệnh : <mkdir <pathname>
+# Những nội dung chính cần ghi nhớ :
+  - Tạo thư mục với câu lệnh : < mkdir <pathname>
   
-  - Tạo file với câu lệnh : <touch <filename>
+  - Tạo file với câu lệnh : < touch <filename>
   
   - Cài đặt package -y mlocate
      + Dùng `locate` để tìm kiếm hoặc dùng `find`
   - Hiển thị thông tin của các file system:
      + Sử dụng câu lệnh ` # df -Th` để hiển thị thông tin của các file system
   - Đọc nội dung trong file :
-     + Sử dụng câu lệnh `cat <Đường dẫn tới file>
+     + Sử dụng câu lệnh `cat <Đường dẫn tới file>`
   - Sử dụng lệnh `rsync` để đồng bộ hóa các cây thư mục
   
   - Sử dụng lệnh `tar` để giải nén các file đuôi gzip, bzip2, xz, zip
   
-###Một số câu lệnh để kiểm tra thông tin của hệ điều hành 
+### Một số câu lệnh để kiểm tra thông tin của hệ điều hành 
 
-    - `cat /etc/*release` cho biết thông tin về tên hệ điều hành, phiên bản và distro đang dùng và một số các thông tin trợ giúp khác'
+    -  `cat /etc/*release` cho biết thông tin về tên hệ điều hành, phiên bản và distro đang dùng và một số các thông tin trợ giúp khác
     
     - `uname -a` cho biết thông tin của kernel như phiên bản kernel là 3.10.0-862.3.2.el7 , 32bit hay 64bit
     
@@ -78,20 +78,20 @@
     - `pstree` hiện thị các tiến trình đang chạy trên hệ thống dưới dạng sơ đồ cây 
     
     - `sleep` sẽ dừng lệnh thực thi trong một thời gian cụ thể
-    ###Networking
+    ### Networking
     
     - `ifconfig` Kiểm tra các card mạng 
     
     - `route` để xem hoặc chỉnh sửa bằng định tuyến IP
     
-    ###Network Filesystem
+    ### Network Filesystem
     
-    -`/etc/export` chứa các đường dẫn thư mục và quyền hạn mà một host muốn chia sẻ dữ liệu với host khác qua NSF.
+    - `/etc/export` chứa các đường dẫn thư mục và quyền hạn mà một host muốn chia sẻ dữ liệu với host khác qua NSF.
       các quyền có thể sử dụng 
       
-       -`rw` : Đọc và ghi
+       - `rw` : Đọc và ghi
        
-       -`ro` : Chỉ được đọc
+       - `ro` : Chỉ được đọc
        
        -`noacess`: Cấm truy cập vào các thư mục con của thư mục đc chia sẻ
        
@@ -115,7 +115,7 @@
     
     
   
-#Sự khác nhau giữa ubuntu server với Centos server :
+# Sự khác nhau giữa ubuntu server với Centos server :
     
   - Sử dụng apt-get để cài đặt các gói package với ubuntu server
   
