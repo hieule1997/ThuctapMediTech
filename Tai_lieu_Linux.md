@@ -125,7 +125,7 @@
     
     
 Các phiên bản của Linux :
-'''
+```
      - Arch Linux 
      - Asianux
      - AndLinux
@@ -147,5 +147,5 @@ Các phiên bản của Linux :
      - PCLinuxOS
      - Red Star OS
      - SteamOS
-     '''
+```
 
