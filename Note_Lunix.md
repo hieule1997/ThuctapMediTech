@@ -89,29 +89,29 @@
  - `/etc/export` chứa các đường dẫn thư mục và quyền hạn mà một host muốn chia sẻ dữ liệu với host khác qua NSF.
       các quyền có thể sử dụng 
       
-      - `rw` : Đọc và ghi
+  - `rw` : Đọc và ghi
        
-      - `ro` : Chỉ được đọc
+  - `ro` : Chỉ được đọc
       
-      -`noacess`: Cấm truy cập vào các thư mục con của thư mục đc chia sẻ
+  -`noacess`: Cấm truy cập vào các thư mục con của thư mục đc chia sẻ
        
-      -`sync` : Tùy chọn này bắt buộc NFS phải ghi các thay đổi vào đĩa trước khi trả lời. Điều này dẫn đến một môi trường ổn định và phù hợp hơn kể từ khi trả lời phản ánh tình trạng thực tế của bộ đĩa (volume) từ xa. Tuy nhiên, nó cũng làm giảm tốc độ của hoạt động tập tin.
+  - `sync` : Tùy chọn này bắt buộc NFS phải ghi các thay đổi vào đĩa trước khi trả lời. Điều này dẫn đến một môi trường ổn định và phù hợp hơn kể từ khi trả lời phản ánh tình trạng thực tế của bộ đĩa (volume) từ xa. Tuy nhiên, nó cũng làm giảm tốc độ của hoạt động tập tin.
        
-      - Hiển thị nội dung sử dụng `cat` và `echo`
+  - Hiển thị nội dung sử dụng `cat` và `echo`
        
-      - Chỉnh sửa nội dụng sử dụng `sed` và `awk`
+  - Chỉnh sửa nội dụng sử dụng `sed` và `awk`
        
-      - Tìm kiếm các đơn vị sử dụng `grep`
+  - Tìm kiếm các đơn vị sử dụng `grep`
         
-      - `cat` sẽ in ra màn hình toàn bộ nội dung file
+  - `cat` sẽ in ra màn hình toàn bộ nội dung file
        
-      - `tac` giống `cat` nhưng thứ tự các dòng in ra sẽ ngược lại
+  - `tac` giống `cat` nhưng thứ tự các dòng in ra sẽ ngược lại
        
-      - `echo` chỉ đơn giản dùng để in ra màn hình
+  - `echo` chỉ đơn giản dùng để in ra màn hình
        
-      - `sort`  sắp xếp lại các dòng trong file text theo thứ tự nào đấy
+  - `sort`  sắp xếp lại các dòng trong file text theo thứ tự nào đấy
        
-      - `uniq` loại bỏ các dòng bị lặp trong file text
+  - `uniq` loại bỏ các dòng bị lặp trong file text
     
     
   
