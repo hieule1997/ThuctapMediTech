@@ -1,7 +1,7 @@
 # Những nội dung chính cần ghi nhớ :
-  - Tạo thư mục với câu lệnh : < mkdir <pathname>
+  - Tạo thư mục với câu lệnh :  >mkdir <pathname>
   
-  - Tạo file với câu lệnh : < touch <filename>
+  - Tạo file với câu lệnh : >touch <filename>
   
   - Cài đặt package -y mlocate
      + Dùng `locate` để tìm kiếm hoặc dùng `find`
