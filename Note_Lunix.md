@@ -132,7 +132,7 @@
         useradd user3 ```     
         
          
-    tạo 4 thư mục và 3 user
+  tạo 4 thư mục và 3 user
     
   - `chown nobody:nogroup /samba/share4/` thiết lập tất cả mọi người đều có thể vào thư mục share4
   
