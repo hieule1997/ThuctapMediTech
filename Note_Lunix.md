@@ -123,15 +123,15 @@
   
   - `testpram` kiểm tra cấu hình 
   
-  - ```
-        mkdir -p /samba/admin/data
+  - ``` mkdir -p /samba/admin/data
         mkdir -p /samba/user2/data	
         mkdir -p /samba/user3/data
         mkdir -p /samba/share4
         useradd admin
         useradd user2
-        useradd user3 ``` 
+        useradd user3 ```     
         
+         
     tạo 4 thư mục và 3 user
     
   - `chown nobody:nogroup /samba/share4/` thiết lập tất cả mọi người đều có thể vào thư mục share4
