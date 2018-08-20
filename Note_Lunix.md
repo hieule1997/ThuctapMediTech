@@ -112,7 +112,67 @@
   - `sort`  sắp xếp lại các dòng trong file text theo thứ tự nào đấy
        
   - `uniq` loại bỏ các dòng bị lặp trong file text
+  
+ ### Samba server and Windows file sharing
+  
+  - `sudo yum install samba` câu lệnh cài đặt samba 
+  
+  - `sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bk` coppy file smb.conf sang file smb.conf.bk 
+  
+  - `vi /etc/samba/smb.conf` chỉnh sửa cấu hình file smb.conf
+  
+  - `testpram` kiểm tra cấu hình 
+  
+  - ```
+        mkdir -p /samba/admin/data
+        mkdir -p /samba/user2/data	
+        mkdir -p /samba/user3/data
+        mkdir -p /samba/share4
+        useradd admin
+        useradd user2
+        useradd user3 ``` 
+    tạo 4 thư mục và 3 user
     
+  - `chown nobody:nogroup /samba/share4/` thiết lập tất cả mọi người đều có thể vào thư mục share4
+  
+  -  ```
+        chown owner-user file 
+        chown owner-user:owner-group file
+        chown owner-user:owner-group directory
+        chown options owner-user:owner-group file``` 
+    các cách sử dụng với chown
+    
+  ### network namespace 
+  
+  - `$ ip netns add hieu` tạo namespace với tên là hieu
+  
+  - `$ ip netns list` Kiểm tra list netns đã có namespace chưa 
+  
+  - `$ ip netns exec hieu ip addr list` Tạo địa chỉ loopback cho namespace hieu
+  
+  - `ip netns exec hieu ip link set dev lo up` bật namespace hieu với câu lệnh 
+  
+  - `ip netns exec hieu ifconfig` config cho ip 
+  
+  - `ip netns delete hieu` xóa namespace hieu
+  
+  - `ip link add vetha type veth peer name vethb` tạo 2 virual interfaces vetha và vethb
+  
+  - `ip link set vethb netns hieu` gán interface vethb vào namespace hieu
+  
+  - `ip netns exec hieu ip link set dev vethb up` cấp quyền khả năng cho vethb chạy trên namespace hieu
+  
+  - `ip link set dev vetha up` gán interface vetha vào namespace global
+  
+  - `ip netns exec hieu ifconfig` xem file config trên file
+  
+  - ```ip addr add 192.168.100.1/24 dev vetha
+       route
+       ip netns exec Blue ip addr add 192.168.100.2/24 dev vethb
+       ip netns exec Blue route```
+     cấu hình interface nằm trong global và trong namespace hieu
+     
+
     
   
 # Sự khác nhau giữa ubuntu server với Centos server :
@@ -133,7 +193,76 @@
   
   - Hiển thị thông tin package ta dùng lệnh `yum info package` đối với dùng centos
   
+# Thao tác với trình soạn thảo vi:
 
+  - Có 3 cách để start trình soạn thảo vi
+
+    `vi filename` : Mở filename, trong trường hợp file chưa tồn tại, nó sẽ tạo ra 1 file mới
+    
+    `vi -R filename` và `view filename` : mở file trong trạng thái read-only
+    
+### Một số phím tắt dùng để di chuyển con trỏ trong VI
+  
+- `k` : lên 1 dòng
+- `h` : sang trái 1 kí tự
+- `j` : xuống 1 dòng
+- `l` : sang phải 1 kí tự
+- `0` hoặc `|` : về đầu dòng
+- `$` : về cuối dòng
+- `w` : sang từ kế tiếp
+- `b` : trở về từ phía trước
+- `(` : Trở về đầu đoạn hiện tại 
+- `)` : Trở về đầu đoạn tiếp theo
+- `e` : sang phải 1 từ
+- `E` : chuyển tới khoảng trống giữa các từ tiếp theo 
+- `G` : chuyển tới dòng cuối 
+- `H` : chuyển tới đầu dòng
+- `M` : chuyển tới giữa dòng
+
+### Một số phím tắt dùng để insert trong vi 
+- `i` : chèn vào trước con trỏ
+- `I` : chèn vào đầu dòng
+- `a` : chèn vào sau con trỏ
+- `A` : chèn vào cuối dòng
+- `o` : tạo 1 dòng mới phía dưới con trỏ
+- `O` : tạo 1 dòng mới phía trên con trỏ
+### Một số phím tắt dùng để delete trong vi 
+
+- `x` xóa kí tự mà con trỏ đang trỏ tới
+- `X` xóa kí tự phía trước con trỏ
+- `dw` xóa 1 từ
+- `d^` xóa từ đầu dòng tới vị trí con trỏ
+- `d$` hoặc `D` : xóa vị trí con trỏ đến cuối dòng
+- `dd` xóa dòng hiện tại của con trỏ
+- `cc` remove nội dung của dòng hiện tại chuyển sang chế độ insert
+### Một số phím tắt dùng copy-paster và undo
+
+- `yy` : Copy dòng hiện tại
+- `yw` : copy từ hiện tại
+- `p` : paste dòng vừa copy vào
+- `u` : undo thao tác trước đó
+- `U` : undo thao tác với dòng
+
+### Một số phím tắt dùng tìm kiếm và thay thế
+
+- `:%s/text1/text2/g` : thay thế text1 bằng text2
+- `/` : tìm từ trên xuống
+- `?` : tìm từ dưới lên
+- `/^iface` : tìm từ iface tiếp theo
+- `n` : tìm hướng xuống dưới
+- `N` : tìm hướng lên trên
+
+### Một số phím tắt dùng trên tập tin
+
+- `:w` : ghi vào tập tin
+- `:x` : lưu và thoát khỏi chế độ soạn thảo
+- `:wq` : giống với `:x`
+- `:w filename` : lưu vào một file mới
+- `:q` : thoát nếu không có thay đổi
+- `:q!` : thoát mà không lưu
+- `:r` : mở file và insert nó vào sau dòng mà con trỏ đang chỉ tới
+- `:f filename` : đổi tên file hiện tại
+- `:set nu` : đánh số thứ tự
   
   
    
