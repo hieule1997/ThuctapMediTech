@@ -135,11 +135,10 @@
     
   - `chown nobody:nogroup /samba/share4/` thiết lập tất cả mọi người đều có thể vào thư mục share4
   
-  -  ```
-        chown owner-user file 
+  -  ```chown owner-user file 
         chown owner-user:owner-group file
         chown owner-user:owner-group directory
-        chown options owner-user:owner-group file``` 
+        chown options owner-user:owner-group file ``` 
     các cách sử dụng với chown
     
   ### network namespace 
