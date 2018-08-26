@@ -16,7 +16,7 @@ Câu lệnh tìm ra hệ điều hành
 
 `export HISTTIMEFORMAT='%F %T '` : Định dạng xuất ra kiểu dữ liệu nào
 
-`history | more` : Show nhiều hơn lịch sử command gồm command và thời gian viết lệnh
+`history` : Show lịch sử command gồm command và thời gian viết lệnh
 
 ### các option với kill
 Cú pháp cơ bản như sau:
