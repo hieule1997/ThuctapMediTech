@@ -1,6 +1,6 @@
 ## Lưu ý trong lúc post ajax
 Tác dụng của việc sử dụng ajax là khi ta muốn load 1 phần dữ liệu nào đó mà không cần phải load lại trang 
-
+ ### Sử lý phía client
 Ảnh sử dụng ajax khi sử lý post form  
 ![anhajax](https://github.com/hieule1997/ThuctapMediTech/blob/master/anh/ajax.png)
 
@@ -43,7 +43,7 @@ Khi thực hiện POST ajax thành công thì việc sử lý dữ liệu ở ph
 
 
 
-XỬ lý phía backend
+### Xử lý phía backend
 
 ![anh](https://github.com/hieule1997/ThuctapMediTech/blob/master/anh/editpost.png) 
 
