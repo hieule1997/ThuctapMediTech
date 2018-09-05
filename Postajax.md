@@ -45,7 +45,7 @@ Khi thực hiện POST ajax thành công thì việc sử lý dữ liệu ở ph
 
 XỬ lý phía backend
 
-![anh](anh) 
+![anh](https://github.com/hieule1997/ThuctapMediTech/blob/master/anh/editpost.png) 
 
 
 `if request.method == 'POST':`
