@@ -2,7 +2,7 @@
 Tác dụng của việc sử dụng ajax là khi ta muốn load 1 phần dữ liệu nào đó mà không cần phải load lại trang 
 
 Ảnh sử dụng ajax khi sử lý post form  
-![anhajax](../anh/ajax)
+![anhajax](https://github.com/hieule1997/ThuctapMediTech/blob/master/anh/ajax.png)
 
 `
 type:'POST',
