@@ -132,9 +132,5 @@ php artisan cache:clear
 
 
 ```
-### Test lại
-```
-apt-get -y install php7.2
-```
 
 
